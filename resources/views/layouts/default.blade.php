@@ -8,17 +8,13 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-        <div class="container">
-            <a href="/" class="navbar-brand">美尔曼-微博</a>
-            <ul class="navbar-nav justify-content-end">
-                <li class="nav-item"><a href="/help" class="nav-link text-white">帮助</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-white">登录</a></li>
-            </ul>
-        </div>
-    </nav>
+    @include('layouts._header')
    <div class="container">
+       <div class="offset-md-1 col-md-10">
        @yield('content')
+       @include('layouts._footer')
+       </div>
    </div>
+
 </body>
 </html>
